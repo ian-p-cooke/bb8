@@ -1,6 +1,6 @@
 [package]
 name = "bb8-redis"
-version = "0.5.0"
+version = "0.6.0"
 authors = ["Daniel Smith <smith.daniel.br@gmail.com>", "Kyle Huey <khuey@kylehuey.com>"]
 description = "r2d2-redis, but for async tokio based connections"
 license = "MIT"
@@ -11,7 +11,7 @@ edition = "2018"
 async-trait = "0.1"
 bb8 = { version = "0.4.0", path = "../bb8" }
 futures = "0.3"
-redis = "0.16"
+redis = "0.17"
 
 [dev-dependencies]
 tokio = { version = "0.2", features = ["macros"] }
