@@ -61,7 +61,7 @@ pub trait ManageConnection: Send + Sync + 'static {
     /// The connection type this manager deals with.
     type Connection: Send + 'static;
     /// The error type returned by `Connection`s.
-    type Error: std::error::Error + Send + 'static;
+    type Error: std::error::Error + Sync + Send + 'static;
 
     /// Attempts to create a new connection.
     async fn connect(&self) -> Result<Self::Connection, Self::Error>;
